@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="vi" >
+<head>
+    <title>Test Keyboard</title>
+    <style type="text/css">* {
+    box-sizing: border-box;
+    outline: 0;
+    user-select: none
+}
+body {
+    background: #211f3c;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 19px;
+    padding: 0;
+    margin: 0
+}
+ul, ol {
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+a {
+    color: #fff;
+    text-decoration: none
+}
+a:hover {
+    color: #a4e472
+}
+.navbar {
+    display: block;
+    background: #2e2c52
+}
+.navbar>ul.language {
+    text-align: center
+}
+.navbar>ul.language>li {
+    display: inline-block;
+    margin: 10px
+}
+.navbar>ul.language>li>a {
+    display: block;
+    padding: 5px 5px;
+    text-transform: uppercase;
+    font-weight: 800
+}
+.navbar>ul.language>li>a:hover {
+    background: #4a4696
+}
+.container {
+    margin: auto;
+    width: 1264px
+}
+section {
+    min-height: calc(100vh - 55px);
+    min-width: 1263px
+}
+
+article {
+    padding: 10px
+}
+article>h1 {
+    text-align: center;
+    font-size: 28px;
+    padding: 0;
+    margin: 15px 0
+}
+article>h2 {
+    font-size: 23px;
+    padding: 0;
+    margin: 15px 0
+}
+article>p {
+    display: block;
+    font-size: 19px;
+    line-height: 1.6;
+    text-align: justify
+}
+article>p.center {
+    text-align: center
+}
+article table.table {
+    border-collapse: collapse;
+    width: 100% !important
+}
+article table.table thead>tr>th {
+    background: #f8f8f8
+}
+article table.table thead>tr>th, article table.table tbody>tr>td {
+    border: 1px solid black;
+    padding: 6px 8px
+}
+.key {
+    border: 1px solid #fff;
+    border-radius: 26px;
+    color: #fff;
+    display: inline-block;
+    font-size: 17px;
+    height: 53px;
+    text-align: center;
+    vertical-align: top;
+    width: 52px;
+    margin: 5px 4.3px
+}
+.keybord {
+    height: 510px;
+    margin-left: -10px;
+    width: 1264px;
+    position: relative;
+    background: #353360;
+    border-radius: 22px
+}
+.top-block {
+    width: 1264px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 16px 0 0
+}
+.top-block>div {
+    display: inline-block;
+    margin: 0 90px
+}
+.content {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: 3
+}
+.keybord-top {
+    background-color: #2e2c52;
+    color: #fff;
+    font-size: 16px;
+    margin: 0 0 14px;
+    height: 42px;
+    padding: 9px 12px 0 12px;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    border-radius: 23px 23px 0 0
+}
+.vh {
+    visibility: hidden
+}
+.dl {
+    font-size: 15px;
+    line-height: .9
+}
+.dl>p {
+    margin-top: 14px
+}
+.t16 {
+    font-size: 16px
+}
+.t16>p {
+    margin-top: 18px
+}
+.key.dl.smin>p {
+    font-size: 17px;
+    margin-top: 6px
+}
+.key.dl.splus>p {
+    font-size: 17px;
+    line-height: .7
+}
+.brackets {
+    margin-left: 8px;
+    margin-right: 8px
+}
+.half {
+    width: 22px
+}
+.key-block {
+    padding: 0 22px;
+    display: flex;
+    flex-wrap:wrap;
+}
+.key.bs>p {
+    margin-top: 4px
+}
+.key.bs {
+    font-size: 35px;
+    width: 112px
+}
+.key.tab {
+    width: 83px
+}
+.key.ds>p {
+    font-size: 16px;
+    margin-top: 8px
+}
+.key.ds.sum {
+    width: 81px
+}
+.key.plus {
+    border: none;
+}
+.key.plus>p {
+    padding-top: 45px;
+    border: 1px solid #fff;
+    border-radius: 26px;
+    height: 116px;
+    margin-top: 0;
+}
+.key.caps {
+    font-size: 16px;
+    width: 105px
+}
+.key.caps>p {
+    margin-top: 17px
+}
+.key.enter {
+    width: 119px
+}
+.key.shift1 {
+    width: 132px
+}
+.key.shift1>p, .key.shift2>p {
+    font-size: 16px;
+    margin-top: 18px
+}
+.key.shift2 {
+    width: 152px
+}
+.key.enter2 {
+    border: none;
+}
+.key.enter2>p {
+    font-size: 16px;
+    padding-top: 48px;
+    height: 116px;
+    border: 1px solid #fff;
+    border-radius: 26px;
+    margin-top: 0;
+}
+.key.enter span {
+    display: inline-block;
+    height: 12px;
+    vertical-align: -1px;
+    width: 24px
+}
+.key.ctrl1, .key.ctrl2 {
+    width: 70px
+}
+.cblock>span {
+    border-bottom: 1px solid #fff;
+    display: block;
+    margin: 5px 3px 0
+}
+.cblock {
+    border: 1px solid #fff;
+    height: 25px;
+    margin: 12px auto 0;
+    width: 25px
+}
+.key.cont {
+    width: 66px
+}
+.key.arup>p {
+    font-size: 17px;
+    margin-top: 16px;
+    margin-left: 2px;
+    transform: rotate(-90deg)
+}
+.key.wndw>p {
+    text-align: center
+}
+.key.wndw span {
+    display: block;
+    height: 23px;
+    margin: 0 auto;
+    width: 24px
+}
+.key.wndw {
+    width: 70px
+}
+.key.alt {
+    width: 70px
+}
+.key.space {
+    width: 428px
+}
+.key.zero {
+    width: 112px
+}
+.key.lclick {
+    border-radius: 0 0 0 15px;
+    height: 40px;
+    vertical-align: bottom;
+    width: 96px
+}
+.key.rclick {
+    border-radius: 0 0 15px 0;
+    height: 40px;
+    vertical-align: bottom;
+    width: 96px
+}
+.key.cclick {
+    border-radius: 0;
+    height: 40px;
+    vertical-align: bottom;
+    width: 24px
+}
+.m-block {
+    display: inline-block;
+    text-align: center;
+    vertical-align: bottom;
+    width: 848px
+}
+.key.arleft>p, .key.arright>p {
+    font-size: 17px;
+    margin: 18px 0
+}
+.key.ardown>p {
+    font-size: 17px;
+    margin: 18px 3px 18px 0;
+    transform: rotate(90deg)
+}
+.key.press {
+    background-color: #fff700;
+    border: 1px solid #fff;
+    color: #000
+}
+.key.active {
+    background-color: #fff;
+    border: 1px solid #fff;
+    color: #000
+}
+.fdesc {
+    font-size: 16px;
+    margin: 0 0 15px
+}
+.key.wndw.active span, .key.wndw.press span {
+    background-position: 0 -23px
+}
+.key.cont.active .cblock, .key.cont.press .cblock, .key.cont.active .cblock>span, .key.cont.press .cblock>span {
+    border-color: #000
+}
+.key.enter.active span, .key.enter.press span {
+    background-position: -24px -13px
+}
+.keybord-top>p {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 3px 0
+}
+.keybord-top>p:first-child {
+    color: #fff700
+}
+.keybord-top>p:nth-child(2) {
+    color: #d7d2ff
+}
+.keybord-top>p:nth-child(3) {
+    color: #988cff
+}
+.keybord-top>p>span {
+    font-weight: normal;
+}
+</style>
+</head>
+<body>
+    <section>
+        <div class="container">
+            <article>
+                <div class="keybord">
+                    <div class="content">
+                        <div class="keybord-top"></div>
+                        <div class="key-block">
+                            <div class="key k27">
+                                <p>Esc</p>
+                            </div>
+                            <div class="key vh"></div>
+                            <div class="key k112">
+                                <p>F1</p>
+                            </div>
+                            <div class="key k113">
+                                <p>F2</p>
+                            </div>
+                            <div class="key k114">
+                                <p>F3</p>
+                            </div>
+                            <div class="key k115">
+                                <p>F4</p>
+                            </div>
+                            <div class="key vh half"></div>
+                            <div class="key k116">
+                                <p>F5</p>
+                            </div>
+                            <div class="key k117">
+                                <p>F6</p>
+                            </div>
+                            <div class="key k118">
+                                <p>F7</p>
+                            </div>
+                            <div class="key k119">
+                                <p>F8</p>
+                            </div>
+                            <div class="key vh half"></div>
+                            <div class="key k120">
+                                <p>F9</p>
+                            </div>
+                            <div class="key k121">
+                                <p>F10</p>
+                            </div>
+                            <div class="key k122">
+                                <p>F11</p>
+                            </div>
+                            <div class="key k123">
+                                <p>F12</p>
+                            </div>
+                            <div class="key dl brackets k44">
+                                <p>
+                                    Prt
+                                    <br>Sc</p>
+                            </div>
+                            <div class="key dl k145">
+                                <p>
+                                    Scr
+                                    <br>Lk</p>
+                            </div>
+                            <div class="key dl k19">
+                                <p>
+                                    Pause
+                                    <br>break</p>
+                            </div>
+                            <div class="key t16 k36 k36_3">
+                                <p>Home</p>
+                            </div>
+                            <div class="key t16 k35 k35_3">
+                                <p>End</p>
+                            </div>
+                            <div class="key dl k192">
+                                <p>
+                                    ~
+                                    <br>`</p>
+                            </div>
+                            <div class="key k49">
+                                <p>1</p>
+                            </div>
+                            <div class="key k50">
+                                <p>2</p>
+                            </div>
+                            <div class="key k51">
+                                <p>3</p>
+                            </div>
+                            <div class="key k52">
+                                <p>4</p>
+                            </div>
+                            <div class="key k53">
+                                <p>5</p>
+                            </div>
+                            <div class="key k54">
+                                <p>6</p>
+                            </div>
+                            <div class="key k55">
+                                <p>7</p>
+                            </div>
+                            <div class="key k56">
+                                <p>8</p>
+                            </div>
+                            <div class="key k57">
+                                <p>9</p>
+                            </div>
+                            <div class="key k48">
+                                <p>0</p>
+                            </div>
+                            <div class="key dl smin k173 k189">
+                                <p>
+                                    _
+                                    <br>-</p>
+                            </div>
+                            <div class="key dl splus k61 k187">
+                                <p>
+                                    +
+                                    <br>=</p>
+                            </div>
+                            <div class="key bs k8">
+                                <p>⟵</p>
+                            </div>
+                            <div class="key dl brackets k33 k33_3">
+                                <p>
+                                    Page
+                                    <br>up</p>
+                            </div>
+                            <div class="key dl k144">
+                                <p>
+                                    Num
+                                    <br>Lock</p>
+                            </div>
+                            <div class="key k111_3">
+                                <p>/</p>
+                            </div>
+                            <div class="key k106_3">
+                                <p>*</p>
+                            </div>
+                            <div class="key dl k109_3">
+                                <p>_</p>
+                            </div>
+                            <div class="key tab k9">
+                                <p>Tab</p>
+                            </div>
+                            <div class="key k81">
+                                <p>Q</p>
+                            </div>
+                            <div class="key k87">
+                                <p>W</p>
+                            </div>
+                            <div class="key k69">
+                                <p>E</p>
+                            </div>
+                            <div class="key k82">
+                                <p>R</p>
+                            </div>
+                            <div class="key k84">
+                                <p>T</p>
+                            </div>
+                            <div class="key k89">
+                                <p>Y</p>
+                            </div>
+                            <div class="key k85">
+                                <p>U</p>
+                            </div>
+                            <div class="key k73">
+                                <p>I</p>
+                            </div>
+                            <div class="key k79">
+                                <p>O</p>
+                            </div>
+                            <div class="key k80">
+                                <p>P</p>
+                            </div>
+                            <div class="key ds k219">
+                                <p>
+                                    {
+                                    <br>[</p>
+                            </div>
+                            <div class="key ds k221">
+                                <p>
+                                    }
+                                    <br>]</p>
+                            </div>
+                            <div class="key ds sum k220">
+                                <p>
+                                    |
+                                    <br>\</p>
+                            </div>
+                            <div class="key dl brackets k34 k34_3">
+                                <p>
+                                    Page
+                                    <br>down</p>
+                            </div>
+                            <div class="key k103_3">
+                                <p>7</p>
+                            </div>
+                            <div class="key k104_3">
+                                <p>8</p>
+                            </div>
+                            <div class="key k105_3">
+                                <p>9</p>
+                            </div>
+                            <div class="key plus k107_3">
+                                <p>+</p>
+                            </div>
+                            <div class="key caps k20">
+                                <p>Caps Lock</p>
+                            </div>
+                            <div class="key k65">
+                                <p>A</p>
+                            </div>
+                            <div class="key k83">
+                                <p>S</p>
+                            </div>
+                            <div class="key k68">
+                                <p>D</p>
+                            </div>
+                            <div class="key k70">
+                                <p>F</p>
+                            </div>
+                            <div class="key k71">
+                                <p>G</p>
+                            </div>
+                            <div class="key k72">
+                                <p>H</p>
+                            </div>
+                            <div class="key k74">
+                                <p>J</p>
+                            </div>
+                            <div class="key k75">
+                                <p>K</p>
+                            </div>
+                            <div class="key k76">
+                                <p>L</p>
+                            </div>
+                            <div class="key ds k59 k186">
+                                <p>
+                                    :
+                                    <br>;</p>
+                            </div>
+                            <div class="key ds k222">
+                                <p>
+                                    "
+                                    <br>'</p>
+                            </div>
+                            <div class="key enter k13">
+                                <p>
+                                    <span></span>
+                                    ENTER
+                                </p>
+                            </div>
+                            <div class="key brackets k45">
+                                <p>ins</p>
+                            </div>
+                            <div class="key k100_3">
+                                <p>4</p>
+                            </div>
+                            <div class="key k101_3 k12_3">
+                                <p>5</p>
+                            </div>
+                            <div class="key k102_3">
+                                <p>6</p>
+                            </div>
+                            <div class="key shift1 k16_1">
+                                <p>SHIFT</p>
+                            </div>
+                            <div class="key k90">
+                                <p>Z</p>
+                            </div>
+                            <div class="key k88">
+                                <p>X</p>
+                            </div>
+                            <div class="key k67">
+                                <p>C</p>
+                            </div>
+                            <div class="key k86">
+                                <p>V</p>
+                            </div>
+                            <div class="key k66">
+                                <p>B</p>
+                            </div>
+                            <div class="key k78">
+                                <p>N</p>
+                            </div>
+                            <div class="key k77">
+                                <p>M</p>
+                            </div>
+                            <div class="key ds k188">
+                                <p>
+                                    &lt;
+                                    <br>,</p>
+                            </div>
+                            <div class="key ds k190">
+                                <p>
+                                    &gt;
+                                    <br>.</p>
+                            </div>
+                            <div class="key ds k191">
+                                <p>
+                                    ?
+                                    <br>/</p>
+                            </div>
+                            <div class="key shift2 k16_2">
+                                <p>SHIFT</p>
+                            </div>
+                            <div class="key brackets k46 k46_3">
+                                <p>del</p>
+                            </div>
+                            <div class="key k97_3">
+                                <p>1</p>
+                            </div>
+                            <div class="key k98_3">
+                                <p>2</p>
+                            </div>
+                            <div class="key k99_3">
+                                <p>3</p>
+                            </div>
+                            <div class="key enter2 k13_3">
+                                <p>Enter</p>
+                            </div>
+                            <div class="key ctrl1 k17_1">
+                                <p>CTRL</p>
+                            </div>
+                            <div class="key wndw k91_1">
+                                <p>
+                                    WIN
+                                </p>
+                            </div>
+                            <div class="key alt k18_1">
+                                <p>ALT</p>
+                            </div>
+                            <div class="key space k32"></div>
+                            <div class="key alt k18_2">
+                                <p>ALT</p>
+                            </div>
+                            <div class="key cont k93">
+                                <div class="cblock">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="key ctrl2 k17_2">
+                                <p>CTRL</p>
+                            </div>
+                            <div class="key arup brackets k38 k38_3">
+                                <p>&gt;</p>
+                            </div>
+                            <div class="key zero k96_3 k45_3">
+                                <p>0</p>
+                            </div>
+                            <div class="key k110 k110_3">
+                                <p>.,</p>
+                            </div>
+                            <div class="m-block">
+                                <div class="key lclick k0"></div>
+                                <div class="key cclick k1"></div>
+                                <div class="key rclick k2"></div>
+                            </div>
+                            <div class="key arleft k37 k37_3">
+                                <p>&lt;</p>
+                            </div>
+                            <div class="key ardown k40 k40_3">
+                                <p>&gt;</p>
+                            </div>
+                            <div class="key arright k39 k39_3">
+                                <p>&gt;</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+    <script type="text/javascript">
+    var _0xd385=["\x6A\x73","\x20","\x73\x70\x6C\x69\x74","\x6C\x65\x6E\x67\x74\x68","\x61\x64\x64\x45\x76\x65\x6E\x74\x4C\x69\x73\x74\x65\x6E\x65\x72","\x6B\x65\x79\x62\x6F\x61\x72\x64","\x45\x73\x63","\x46\x31","\x46\x32","\x46\x33","\x46\x34","\x46\x35","\x46\x36","\x46\x37","\x46\x38","\x46\x39","\x46\x31\x30","\x46\x31\x31","\x46\x31\x32","\x53\x63\x72\x20\x4C\x6B","\x50\x61\x75\x73\x65\x20\x62\x72\x65\x61\x6B","\x69\x6E\x73","\x64\x65\x6C","\x48\x6F\x6D\x65","\x45\x6E\x64","\x50\x61\x67\x65\x20\x75\x70","\x50\x61\x67\x65\x20\x64\x6F\x77\x6E","\x7E","\x31","\x32","\x33","\x34","\x35","\x36","\x37","\x38","\x39","\x30","\x2D\x5F","\x3D\x2B","\x42\x61\x63\x6B\x73\x70\x61\x63\x65","\x4E\x75\x6D\x20\x4C\x6F\x63\x6B","\x6E\x75\x6D\x20\x2F","\x6E\x75\x6D\x20\x2A","\x6E\x75\x6D\x20\x2D","\x54\x61\x62","\x51","\x57","\x45","\x52","\x54","\x59","\x55","\x49","\x4F","\x50","\x5B\x7B","\x5D\x7D","\x7C\x5C","\x6E\x75\x6D\x20\x37","\x6E\x75\x6D\x20\x38","\x6E\x75\x6D\x20\x39","\x6E\x75\x6D\x20\x2B","\x43\x61\x70\x73\x20\x4C\x6F\x63\x6B","\x41","\x53","\x44","\x46","\x47","\x48","\x4A","\x4B","\x4C","\x3B\x3A","\x27\x22","\x6E\x75\x6D\x20\x34","\x6E\x75\x6D\x20\x35","\x6E\x75\x6D\x20\x36","\x5A","\x58","\x43","\x56","\x42","\x4E","\x4D","\x2C\x3C","\x2E\x3E","\x2F\x3F","\x6E\x75\x6D\x20\x30","\x53\x70\x61\x63\x65","\x6D\x65\x6E\x75","\u2191","\u2193","\u2190","\u2192","\x6E\x75\x6D\x20\x2E","\x6E\x75\x6D\x20\x31","\x6E\x75\x6D\x20\x32","\x6E\x75\x6D\x20\x33","\x4C\x65\x66\x74\x20\x43\x6C\x69\x63\x6B","\x53\x63\x72\x6F\x6C\x6C\x20\x43\x6C\x69\x63\x6B","\x52\x69\x67\x68\x74\x20\x43\x6C\x69\x63\x6B","\x4C\x65\x66\x74\x20\x53\x68\x69\x66\x74","\x52\x69\x67\x68\x74\x20\x53\x68\x69\x66\x74","\x4C\x65\x66\x74\x20\x41\x4C\x54","\x52\x69\x67\x68\x74\x20\x41\x4C\x54","\x4C\x65\x66\x74\x20\x43\x54\x52\x4C","\x52\x69\x67\x68\x74\x20\x43\x54\x52\x4C","\x57\x49\x4E","\x45\x6E\x74\x65\x72","\x50\x72\x74\x20\x53\x63","\x3C\x70\x3E\x28\x3C\x73\x70\x61\x6E\x3E","\x3C\x2F\x73\x70\x61\x6E\x3E\x29\x3C\x2F\x70\x3E\x20","\x69\x6E\x6E\x65\x72\x48\x54\x4D\x4C","\x2E\x6B\x65\x79\x62\x6F\x72\x64\x2D\x74\x6F\x70","\x71\x75\x65\x72\x79\x53\x65\x6C\x65\x63\x74\x6F\x72","\x2E\x6B","\x5F","","\x2E\x6B\x65\x79\x62\x6F\x72\x64","\x6B\x65\x79\x75\x70\x20\x6B\x65\x79\x64\x6F\x77\x6E\x20\x70\x72\x65\x73\x73\x20\x6D\x6F\x75\x73\x65\x75\x70\x20\x6D\x6F\x75\x73\x65\x64\x6F\x77\x6E","\x70\x72\x65\x76\x65\x6E\x74\x44\x65\x66\x61\x75\x6C\x74","\x6B\x65\x79\x43\x6F\x64\x65","\x6B\x65\x79","\x6C\x6F\x67","\x62\x75\x74\x74\x6F\x6E","\x3D","\x2E","\x5B","\x5D","\x6C\x6F\x63\x61\x74\x69\x6F\x6E","\x63\x6C\x61\x73\x73\x4E\x61\x6D\x65","\x74\x79\x70\x65","\x69\x6E\x63\x6C\x75\x64\x65\x73","\x6B\x65\x79\x64\x6F\x77\x6E","\x6D\x6F\x75\x73\x65\x64\x6F\x77\x6E","\x70\x72\x65\x73\x73","\x61\x64\x64","\x63\x6C\x61\x73\x73\x4C\x69\x73\x74","\x61\x63\x74\x69\x76\x65","\x72\x65\x6D\x6F\x76\x65","\x6C\x69\x73\x74","\x6B\x65\x79\x73\x68\x6F\x77","\x63\x6F\x6E\x74\x65\x78\x74\x6D\x65\x6E\x75","\x6F\x6E\x63\x6F\x6E\x74\x65\x78\x74\x6D\x65\x6E\x75","\x72\x65\x74\x75\x72\x6E\x56\x61\x6C\x75\x65","\x65\x76\x65\x6E\x74","\x61\x74\x74\x61\x63\x68\x45\x76\x65\x6E\x74","\x73\x63\x72\x69\x70\x74","\x63\x72\x65\x61\x74\x65\x45\x6C\x65\x6D\x65\x6E\x74","\x61\x73\x79\x6E\x63","\x74\x65\x78\x74\x2F\x6A\x61\x76\x61\x73\x63\x72\x69\x70\x74","\x6F\x6E\x6C\x6F\x61\x64","\x73\x72\x63","\x61\x70\x70\x65\x6E\x64\x43\x68\x69\x6C\x64","\x68\x65\x61\x64","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x73\x42\x79\x54\x61\x67\x4E\x61\x6D\x65","\x61\x6E\x61\x6C\x79\x74\x69\x63\x73","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x77\x77\x77\x2E\x67\x6F\x6F\x67\x6C\x65\x74\x61\x67\x6D\x61\x6E\x61\x67\x65\x72\x2E\x63\x6F\x6D\x2F\x67\x74\x61\x67\x2F\x6A\x73\x3F\x69\x64\x3D","\x64\x61\x74\x61\x4C\x61\x79\x65\x72","\x70\x75\x73\x68","\x63\x6F\x6E\x66\x69\x67","\x44\x4F\x4D\x43\x6F\x6E\x74\x65\x6E\x74\x4C\x6F\x61\x64\x65\x64","\x72\x75\x6E","\x73\x63\x72\x6F\x6C\x6C\x20\x63\x6C\x69\x63\x6B\x20\x72\x65\x73\x69\x7A\x65"];var _0xc7ed=[_0xd385[0],_0xd385[1],_0xd385[2],_0xd385[3],_0xd385[4],_0xd385[5],_0xd385[6],_0xd385[7],_0xd385[8],_0xd385[9],_0xd385[10],_0xd385[11],_0xd385[12],_0xd385[13],_0xd385[14],_0xd385[15],_0xd385[16],_0xd385[17],_0xd385[18],_0xd385[19],_0xd385[20],_0xd385[21],_0xd385[22],_0xd385[23],_0xd385[24],_0xd385[25],_0xd385[26],_0xd385[27],_0xd385[28],_0xd385[29],_0xd385[30],_0xd385[31],_0xd385[32],_0xd385[33],_0xd385[34],_0xd385[35],_0xd385[36],_0xd385[37],_0xd385[38],_0xd385[39],_0xd385[40],_0xd385[41],_0xd385[42],_0xd385[43],_0xd385[44],_0xd385[45],_0xd385[46],_0xd385[47],_0xd385[48],_0xd385[49],_0xd385[50],_0xd385[51],_0xd385[52],_0xd385[53],_0xd385[54],_0xd385[55],_0xd385[56],_0xd385[57],_0xd385[58],_0xd385[59],_0xd385[60],_0xd385[61],_0xd385[62],_0xd385[63],_0xd385[64],_0xd385[65],_0xd385[66],_0xd385[67],_0xd385[68],_0xd385[69],_0xd385[70],_0xd385[71],_0xd385[72],_0xd385[73],_0xd385[74],_0xd385[75],_0xd385[76],_0xd385[77],_0xd385[78],_0xd385[79],_0xd385[80],_0xd385[81],_0xd385[82],_0xd385[83],_0xd385[84],_0xd385[85],_0xd385[86],_0xd385[87],_0xd385[88],_0xd385[89],_0xd385[90],_0xd385[91],_0xd385[92],_0xd385[93],_0xd385[94],_0xd385[95],_0xd385[96],_0xd385[97],_0xd385[98],_0xd385[99],_0xd385[100],_0xd385[101],_0xd385[102],_0xd385[103],_0xd385[104],_0xd385[105],_0xd385[106],_0xd385[107],_0xd385[108],_0xd385[109],_0xd385[110],_0xd385[111],_0xd385[112],_0xd385[113],_0xd385[114],_0xd385[115],_0xd385[116],_0xd385[117],_0xd385[118],_0xd385[119],_0xd385[120],_0xd385[121],_0xd385[122],_0xd385[123],_0xd385[124],_0xd385[125],_0xd385[126],_0xd385[127],_0xd385[128],_0xd385[129],_0xd385[130],_0xd385[131],_0xd385[132],_0xd385[133],_0xd385[134],_0xd385[135],_0xd385[136],_0xd385[137],_0xd385[138],_0xd385[139],_0xd385[140],_0xd385[141],_0xd385[142],_0xd385[143],_0xd385[144],_0xd385[145],_0xd385[146],_0xd385[147],_0xd385[148],_0xd385[149],_0xd385[150],_0xd385[151],_0xd385[152],_0xd385[153],_0xd385[154],_0xd385[155],_0xd385[156],_0xd385[157],_0xd385[158],_0xd385[159],_0xd385[160],_0xd385[161],_0xd385[162],_0xd385[163],_0xd385[164]];var _0xc587=[_0xc7ed[0],_0xc7ed[1],_0xc7ed[2],_0xc7ed[3],_0xc7ed[4],_0xc7ed[5],_0xc7ed[6],_0xc7ed[7],_0xc7ed[8],_0xc7ed[9],_0xc7ed[10],_0xc7ed[11],_0xc7ed[12],_0xc7ed[13],_0xc7ed[14],_0xc7ed[15],_0xc7ed[16],_0xc7ed[17],_0xc7ed[18],_0xc7ed[19],_0xc7ed[20],_0xc7ed[21],_0xc7ed[22],_0xc7ed[23],_0xc7ed[24],_0xc7ed[25],_0xc7ed[26],_0xc7ed[27],_0xc7ed[28],_0xc7ed[29],_0xc7ed[30],_0xc7ed[31],_0xc7ed[32],_0xc7ed[33],_0xc7ed[34],_0xc7ed[35],_0xc7ed[36],_0xc7ed[37],_0xc7ed[38],_0xc7ed[39],_0xc7ed[40],_0xc7ed[41],_0xc7ed[42],_0xc7ed[43],_0xc7ed[44],_0xc7ed[45],_0xc7ed[46],_0xc7ed[47],_0xc7ed[48],_0xc7ed[49],_0xc7ed[50],_0xc7ed[51],_0xc7ed[52],_0xc7ed[53],_0xc7ed[54],_0xc7ed[55],_0xc7ed[56],_0xc7ed[57],_0xc7ed[58],_0xc7ed[59],_0xc7ed[60],_0xc7ed[61],_0xc7ed[62],_0xc7ed[63],_0xc7ed[64],_0xc7ed[65],_0xc7ed[66],_0xc7ed[67],_0xc7ed[68],_0xc7ed[69],_0xc7ed[70],_0xc7ed[71],_0xc7ed[72],_0xc7ed[73],_0xc7ed[74],_0xc7ed[75],_0xc7ed[76],_0xc7ed[77],_0xc7ed[78],_0xc7ed[79],_0xc7ed[80],_0xc7ed[81],_0xc7ed[82],_0xc7ed[83],_0xc7ed[84],_0xc7ed[85],_0xc7ed[86],_0xc7ed[87],_0xc7ed[88],_0xc7ed[89],_0xc7ed[90],_0xc7ed[91],_0xc7ed[92],_0xc7ed[93],_0xc7ed[94],_0xc7ed[95],_0xc7ed[96],_0xc7ed[97],_0xc7ed[98],_0xc7ed[99],_0xc7ed[100],_0xc7ed[101],_0xc7ed[102],_0xc7ed[103],_0xc7ed[104],_0xc7ed[105],_0xc7ed[106],_0xc7ed[107],_0xc7ed[108],_0xc7ed[109],_0xc7ed[110],_0xc7ed[111],_0xc7ed[112],_0xc7ed[113],_0xc7ed[114],_0xc7ed[115],_0xc7ed[116],_0xc7ed[117],_0xc7ed[118],_0xc7ed[119],_0xc7ed[120],_0xc7ed[121],_0xc7ed[122],_0xc7ed[123],_0xc7ed[124],_0xc7ed[125],_0xc7ed[126],_0xc7ed[127],_0xc7ed[128],_0xc7ed[129],_0xc7ed[130],_0xc7ed[131],_0xc7ed[132],_0xc7ed[133],_0xc7ed[134],_0xc7ed[135],_0xc7ed[136],_0xc7ed[137],_0xc7ed[138],_0xc7ed[139],_0xc7ed[140],_0xc7ed[141],_0xc7ed[142],_0xc7ed[143],_0xc7ed[144],_0xc7ed[145],_0xc7ed[146],_0xc7ed[147],_0xc7ed[148],_0xc7ed[149],_0xc7ed[150],_0xc7ed[151],_0xc7ed[152],_0xc7ed[153],_0xc7ed[154],_0xc7ed[155],_0xc7ed[156],_0xc7ed[157],_0xc7ed[158],_0xc7ed[159],_0xc7ed[160],_0xc7ed[161],_0xc7ed[162],_0xc7ed[163],_0xc7ed[164]];var _0x191f=[_0xc587[0],_0xc587[1],_0xc587[2],_0xc587[3],_0xc587[4],_0xc587[5],_0xc587[6],_0xc587[7],_0xc587[8],_0xc587[9],_0xc587[10],_0xc587[11],_0xc587[12],_0xc587[13],_0xc587[14],_0xc587[15],_0xc587[16],_0xc587[17],_0xc587[18],_0xc587[19],_0xc587[20],_0xc587[21],_0xc587[22],_0xc587[23],_0xc587[24],_0xc587[25],_0xc587[26],_0xc587[27],_0xc587[28],_0xc587[29],_0xc587[30],_0xc587[31],_0xc587[32],_0xc587[33],_0xc587[34],_0xc587[35],_0xc587[36],_0xc587[37],_0xc587[38],_0xc587[39],_0xc587[40],_0xc587[41],_0xc587[42],_0xc587[43],_0xc587[44],_0xc587[45],_0xc587[46],_0xc587[47],_0xc587[48],_0xc587[49],_0xc587[50],_0xc587[51],_0xc587[52],_0xc587[53],_0xc587[54],_0xc587[55],_0xc587[56],_0xc587[57],_0xc587[58],_0xc587[59],_0xc587[60],_0xc587[61],_0xc587[62],_0xc587[63],_0xc587[64],_0xc587[65],_0xc587[66],_0xc587[67],_0xc587[68],_0xc587[69],_0xc587[70],_0xc587[71],_0xc587[72],_0xc587[73],_0xc587[74],_0xc587[75],_0xc587[76],_0xc587[77],_0xc587[78],_0xc587[79],_0xc587[80],_0xc587[81],_0xc587[82],_0xc587[83],_0xc587[84],_0xc587[85],_0xc587[86],_0xc587[87],_0xc587[88],_0xc587[89],_0xc587[90],_0xc587[91],_0xc587[92],_0xc587[93],_0xc587[94],_0xc587[95],_0xc587[96],_0xc587[97],_0xc587[98],_0xc587[99],_0xc587[100],_0xc587[101],_0xc587[102],_0xc587[103],_0xc587[104],_0xc587[105],_0xc587[106],_0xc587[107],_0xc587[108],_0xc587[109],_0xc587[110],_0xc587[111],_0xc587[112],_0xc587[113],_0xc587[114],_0xc587[115],_0xc587[116],_0xc587[117],_0xc587[118],_0xc587[119],_0xc587[120],_0xc587[121],_0xc587[122],_0xc587[123],_0xc587[124],_0xc587[125],_0xc587[126],_0xc587[127],_0xc587[128],_0xc587[129],_0xc587[130],_0xc587[131],_0xc587[132],_0xc587[133],_0xc587[134],_0xc587[135],_0xc587[136],_0xc587[137],_0xc587[138],_0xc587[139],_0xc587[140],_0xc587[141],_0xc587[142],_0xc587[143],_0xc587[144],_0xc587[145],_0xc587[146],_0xc587[147],_0xc587[148],_0xc587[149],_0xc587[150],_0xc587[151],_0xc587[152],_0xc587[153],_0xc587[154],_0xc587[155],_0xc587[156],_0xc587[157],_0xc587[158],_0xc587[159],_0xc587[160],_0xc587[161],_0xc587[162],_0xc587[163],_0xc587[164]];var _0xfbf3=[_0x191f[0],_0x191f[1],_0x191f[2],_0x191f[3],_0x191f[4],_0x191f[5],_0x191f[6],_0x191f[7],_0x191f[8],_0x191f[9],_0x191f[10],_0x191f[11],_0x191f[12],_0x191f[13],_0x191f[14],_0x191f[15],_0x191f[16],_0x191f[17],_0x191f[18],_0x191f[19],_0x191f[20],_0x191f[21],_0x191f[22],_0x191f[23],_0x191f[24],_0x191f[25],_0x191f[26],_0x191f[27],_0x191f[28],_0x191f[29],_0x191f[30],_0x191f[31],_0x191f[32],_0x191f[33],_0x191f[34],_0x191f[35],_0x191f[36],_0x191f[37],_0x191f[38],_0x191f[39],_0x191f[40],_0x191f[41],_0x191f[42],_0x191f[43],_0x191f[44],_0x191f[45],_0x191f[46],_0x191f[47],_0x191f[48],_0x191f[49],_0x191f[50],_0x191f[51],_0x191f[52],_0x191f[53],_0x191f[54],_0x191f[55],_0x191f[56],_0x191f[57],_0x191f[58],_0x191f[59],_0x191f[60],_0x191f[61],_0x191f[62],_0x191f[63],_0x191f[64],_0x191f[65],_0x191f[66],_0x191f[67],_0x191f[68],_0x191f[69],_0x191f[70],_0x191f[71],_0x191f[72],_0x191f[73],_0x191f[74],_0x191f[75],_0x191f[76],_0x191f[77],_0x191f[78],_0x191f[79],_0x191f[80],_0x191f[81],_0x191f[82],_0x191f[83],_0x191f[84],_0x191f[85],_0x191f[86],_0x191f[87],_0x191f[88],_0x191f[89],_0x191f[90],_0x191f[91],_0x191f[92],_0x191f[93],_0x191f[94],_0x191f[95],_0x191f[96],_0x191f[97],_0x191f[98],_0x191f[99],_0x191f[100],_0x191f[101],_0x191f[102],_0x191f[103],_0x191f[104],_0x191f[105],_0x191f[106],_0x191f[107],_0x191f[108],_0x191f[109],_0x191f[110],_0x191f[111],_0x191f[112],_0x191f[113],_0x191f[114],_0x191f[115],_0x191f[116],_0x191f[117],_0x191f[118],_0x191f[119],_0x191f[120],_0x191f[121],_0x191f[122],_0x191f[123],_0x191f[124],_0x191f[125],_0x191f[126],_0x191f[127],_0x191f[128],_0x191f[129],_0x191f[130],_0x191f[131],_0x191f[132],_0x191f[133],_0x191f[134],_0x191f[135],_0x191f[136],_0x191f[137],_0x191f[138],_0x191f[139],_0x191f[140],_0x191f[141],_0x191f[142],_0x191f[143],_0x191f[144],_0x191f[145],_0x191f[146],_0x191f[147],_0x191f[148],_0x191f[149],_0x191f[150],_0x191f[151],_0x191f[152],_0x191f[153],_0x191f[154],_0x191f[155],_0x191f[156],_0x191f[157],_0x191f[158],_0x191f[159],_0x191f[160],_0x191f[161],_0x191f[162],_0x191f[163],_0x191f[164]];var _0xb182=[_0xfbf3[0],_0xfbf3[1],_0xfbf3[2],_0xfbf3[3],_0xfbf3[4],_0xfbf3[5],_0xfbf3[6],_0xfbf3[7],_0xfbf3[8],_0xfbf3[9],_0xfbf3[10],_0xfbf3[11],_0xfbf3[12],_0xfbf3[13],_0xfbf3[14],_0xfbf3[15],_0xfbf3[16],_0xfbf3[17],_0xfbf3[18],_0xfbf3[19],_0xfbf3[20],_0xfbf3[21],_0xfbf3[22],_0xfbf3[23],_0xfbf3[24],_0xfbf3[25],_0xfbf3[26],_0xfbf3[27],_0xfbf3[28],_0xfbf3[29],_0xfbf3[30],_0xfbf3[31],_0xfbf3[32],_0xfbf3[33],_0xfbf3[34],_0xfbf3[35],_0xfbf3[36],_0xfbf3[37],_0xfbf3[38],_0xfbf3[39],_0xfbf3[40],_0xfbf3[41],_0xfbf3[42],_0xfbf3[43],_0xfbf3[44],_0xfbf3[45],_0xfbf3[46],_0xfbf3[47],_0xfbf3[48],_0xfbf3[49],_0xfbf3[50],_0xfbf3[51],_0xfbf3[52],_0xfbf3[53],_0xfbf3[54],_0xfbf3[55],_0xfbf3[56],_0xfbf3[57],_0xfbf3[58],_0xfbf3[59],_0xfbf3[60],_0xfbf3[61],_0xfbf3[62],_0xfbf3[63],_0xfbf3[64],_0xfbf3[65],_0xfbf3[66],_0xfbf3[67],_0xfbf3[68],_0xfbf3[69],_0xfbf3[70],_0xfbf3[71],_0xfbf3[72],_0xfbf3[73],_0xfbf3[74],_0xfbf3[75],_0xfbf3[76],_0xfbf3[77],_0xfbf3[78],_0xfbf3[79],_0xfbf3[80],_0xfbf3[81],_0xfbf3[82],_0xfbf3[83],_0xfbf3[84],_0xfbf3[85],_0xfbf3[86],_0xfbf3[87],_0xfbf3[88],_0xfbf3[89],_0xfbf3[90],_0xfbf3[91],_0xfbf3[92],_0xfbf3[93],_0xfbf3[94],_0xfbf3[95],_0xfbf3[96],_0xfbf3[97],_0xfbf3[98],_0xfbf3[99],_0xfbf3[100],_0xfbf3[101],_0xfbf3[102],_0xfbf3[103],_0xfbf3[104],_0xfbf3[105],_0xfbf3[106],_0xfbf3[107],_0xfbf3[108],_0xfbf3[109],_0xfbf3[110],_0xfbf3[111],_0xfbf3[112],_0xfbf3[113],_0xfbf3[114],_0xfbf3[115],_0xfbf3[116],_0xfbf3[117],_0xfbf3[118],_0xfbf3[119],_0xfbf3[120],_0xfbf3[121],_0xfbf3[122],_0xfbf3[123],_0xfbf3[124],_0xfbf3[125],_0xfbf3[126],_0xfbf3[127],_0xfbf3[128],_0xfbf3[129],_0xfbf3[130],_0xfbf3[131],_0xfbf3[132],_0xfbf3[133],_0xfbf3[134],_0xfbf3[135],_0xfbf3[136],_0xfbf3[137],_0xfbf3[138],_0xfbf3[139],_0xfbf3[140],_0xfbf3[141],_0xfbf3[142],_0xfbf3[143],_0xfbf3[144],_0xfbf3[145],_0xfbf3[146],_0xfbf3[147],_0xfbf3[148],_0xfbf3[149],_0xfbf3[150],_0xfbf3[151],_0xfbf3[152],_0xfbf3[153],_0xfbf3[154],_0xfbf3[155],_0xfbf3[156],_0xfbf3[157],_0xfbf3[158],_0xfbf3[159],_0xfbf3[160],_0xfbf3[161],_0xfbf3[162],_0xfbf3[163],_0xfbf3[164]];var _0x7109=[_0xb182[0],_0xb182[1],_0xb182[2],_0xb182[3],_0xb182[4],_0xb182[5],_0xb182[6],_0xb182[7],_0xb182[8],_0xb182[9],_0xb182[10],_0xb182[11],_0xb182[12],_0xb182[13],_0xb182[14],_0xb182[15],_0xb182[16],_0xb182[17],_0xb182[18],_0xb182[19],_0xb182[20],_0xb182[21],_0xb182[22],_0xb182[23],_0xb182[24],_0xb182[25],_0xb182[26],_0xb182[27],_0xb182[28],_0xb182[29],_0xb182[30],_0xb182[31],_0xb182[32],_0xb182[33],_0xb182[34],_0xb182[35],_0xb182[36],_0xb182[37],_0xb182[38],_0xb182[39],_0xb182[40],_0xb182[41],_0xb182[42],_0xb182[43],_0xb182[44],_0xb182[45],_0xb182[46],_0xb182[47],_0xb182[48],_0xb182[49],_0xb182[50],_0xb182[51],_0xb182[52],_0xb182[53],_0xb182[54],_0xb182[55],_0xb182[56],_0xb182[57],_0xb182[58],_0xb182[59],_0xb182[60],_0xb182[61],_0xb182[62],_0xb182[63],_0xb182[64],_0xb182[65],_0xb182[66],_0xb182[67],_0xb182[68],_0xb182[69],_0xb182[70],_0xb182[71],_0xb182[72],_0xb182[73],_0xb182[74],_0xb182[75],_0xb182[76],_0xb182[77],_0xb182[78],_0xb182[79],_0xb182[80],_0xb182[81],_0xb182[82],_0xb182[83],_0xb182[84],_0xb182[85],_0xb182[86],_0xb182[87],_0xb182[88],_0xb182[89],_0xb182[90],_0xb182[91],_0xb182[92],_0xb182[93],_0xb182[94],_0xb182[95],_0xb182[96],_0xb182[97],_0xb182[98],_0xb182[99],_0xb182[100],_0xb182[101],_0xb182[102],_0xb182[103],_0xb182[104],_0xb182[105],_0xb182[106],_0xb182[107],_0xb182[108],_0xb182[109],_0xb182[110],_0xb182[111],_0xb182[112],_0xb182[113],_0xb182[114],_0xb182[115],_0xb182[116],_0xb182[117],_0xb182[118],_0xb182[119],_0xb182[120],_0xb182[121],_0xb182[122],_0xb182[123],_0xb182[124],_0xb182[125],_0xb182[126],_0xb182[127],_0xb182[128],_0xb182[129],_0xb182[130],_0xb182[131],_0xb182[132],_0xb182[133],_0xb182[134],_0xb182[135],_0xb182[136],_0xb182[137],_0xb182[138],_0xb182[139],_0xb182[140],_0xb182[141],_0xb182[142],_0xb182[143],_0xb182[144],_0xb182[145],_0xb182[146],_0xb182[147],_0xb182[148],_0xb182[149],_0xb182[150],_0xb182[151],_0xb182[152],_0xb182[153],_0xb182[154],_0xb182[155],_0xb182[156],_0xb182[157],_0xb182[158],_0xb182[159],_0xb182[160],_0xb182[161],_0xb182[162],_0xb182[163],_0xb182[164]];const $={};$[_0x7109[0]]={addEventListener:function(_0xb86dx8,_0xb86dx9,_0xb86dxa){var _0xb86dxb=_0xb86dx9[_0x7109[2]](_0x7109[1]);for(var _0xb86dxc=0,_0xb86dxd=_0xb86dxb[_0x7109[3]];_0xb86dxc<_0xb86dxd;_0xb86dxc++){_0xb86dx8[_0x7109[4]](_0xb86dxb[_0xb86dxc],_0xb86dxa,false)}}};$[_0x7109[5]]={list:function(_0xb86dxe,_0xb86dxf){switch(_0xb86dxe){case 27:return _0x7109[6];break;case 112:return _0x7109[7];break;case 113:return _0x7109[8];break;case 114:return _0x7109[9];break;case 115:return _0x7109[10];break;case 116:return _0x7109[11];break;case 117:return _0x7109[12];break;case 118:return _0x7109[13];break;case 119:return _0x7109[14];break;case 120:return _0x7109[15];break;case 121:return _0x7109[16];break;case 122:return _0x7109[17];break;case 123:return _0x7109[18];break;case 145:return _0x7109[19];break;case 19:return _0x7109[20];break;case 45:return _0x7109[21];break;case 46:return _0x7109[22];break;case 36:return _0x7109[23];break;case 35:return _0x7109[24];break;case 33:return _0x7109[25];break;case 34:return _0x7109[26];break;case 192:return _0x7109[27];break;case 49:return _0x7109[28];break;case 50:return _0x7109[29];break;case 51:return _0x7109[30];break;case 52:return _0x7109[31];break;case 53:return _0x7109[32];break;case 54:return _0x7109[33];break;case 55:return _0x7109[34];break;case 56:return _0x7109[35];break;case 57:return _0x7109[36];break;case 48:return _0x7109[37];break;case 189:return _0x7109[38];break;case 173:return _0x7109[38];break;case 187:return _0x7109[39];break;case 61:return _0x7109[39];break;case 8:return _0x7109[40];break;case 144:return _0x7109[41];break;case 111:return _0x7109[42];break;case 106:return _0x7109[43];break;case 109:return _0x7109[44];break;case 9:return _0x7109[45];break;case 81:return _0x7109[46];break;case 87:return _0x7109[47];break;case 69:return _0x7109[48];break;case 82:return _0x7109[49];break;case 84:return _0x7109[50];break;case 89:return _0x7109[51];break;case 85:return _0x7109[52];break;case 73:return _0x7109[53];break;case 79:return _0x7109[54];break;case 80:return _0x7109[55];break;case 219:return _0x7109[56];break;case 221:return _0x7109[57];break;case 220:return _0x7109[58];break;case 103:return _0x7109[59];break;case 104:return _0x7109[60];break;case 105:return _0x7109[61];break;case 107:return _0x7109[62];break;case 20:return _0x7109[63];break;case 65:return _0x7109[64];break;case 83:return _0x7109[65];break;case 68:return _0x7109[66];break;case 70:return _0x7109[67];break;case 71:return _0x7109[68];break;case 72:return _0x7109[69];break;case 74:return _0x7109[70];break;case 75:return _0x7109[71];break;case 76:return _0x7109[72];break;case 59:return _0x7109[73];break;case 186:return _0x7109[73];break;case 222:return _0x7109[74];break;case 100:return _0x7109[75];break;case 101:return _0x7109[76];break;case 102:return _0x7109[77];break;case 90:return _0x7109[78];break;case 88:return _0x7109[79];break;case 67:return _0x7109[80];break;case 86:return _0x7109[81];break;case 66:return _0x7109[82];break;case 78:return _0x7109[83];break;case 77:return _0x7109[84];break;case 188:return _0x7109[85];break;case 190:return _0x7109[86];break;case 191:return _0x7109[87];break;case 96:return _0x7109[88];break;case 32:return _0x7109[89];break;case 93:return _0x7109[90];break;case 38:return _0x7109[91];break;case 40:return _0x7109[92];break;case 37:return _0x7109[93];break;case 39:return _0x7109[94];break;case 110:return _0x7109[95];break;case 97:return _0x7109[96];break;case 98:return _0x7109[97];break;case 99:return _0x7109[98];break;case 0:return _0x7109[99];break;case 1:return _0x7109[100];break;case 2:return _0x7109[101];break;case 16:if(_0xb86dxf===1){return _0x7109[102]}else{return _0x7109[103]};break;case 18:if(_0xb86dxf===1){return _0x7109[104]}else{return _0x7109[105]};break;case 17:if(_0xb86dxf===1){return _0x7109[106]}else{return _0x7109[107]};break;case 91:return _0x7109[108];break;case 13:return _0x7109[109];break;case 44:return _0x7109[110];break}},keyshow:function(_0xb86dx10){if(_0xb86dx10!==undefined){let _0xb86dx11=_0x7109[111]+_0xb86dx10+_0x7109[112];document[_0x7109[115]](_0x7109[114])[_0x7109[113]]=_0xb86dx11+document[_0x7109[115]](_0x7109[114])[_0x7109[113]]}},className:function(_0xb86dx12,_0xb86dx13){return _0x7109[116]+_0xb86dx12+(_0xb86dx13!==0&&_0xb86dx13!==undefined?_0x7109[117]+_0xb86dx13:_0x7109[118])},run:function(){if(document[_0x7109[115]](_0x7109[119])===null){return false};$[_0x7109[0]][_0x7109[4]](document,_0x7109[120],(_0xb86dx14)=>{_0xb86dx14[_0x7109[121]]();console[_0x7109[124]](_0xb86dx14[_0x7109[122]],_0xb86dx14[_0x7109[123]]);let _0xb86dx15=_0xb86dx14[_0x7109[122]]===undefined?event[_0x7109[125]]:_0xb86dx14[_0x7109[122]];if(_0xb86dx15==231){if(_0xb86dx14[_0x7109[123]]===_0x7109[28]){_0xb86dx15=49}else{if(_0xb86dx14[_0x7109[123]]===_0x7109[29]){_0xb86dx15=50}else{if(_0xb86dx14[_0x7109[123]]===_0x7109[30]){_0xb86dx15=51}else{if(_0xb86dx14[_0x7109[123]]===_0x7109[31]){_0xb86dx15=52}else{if(_0xb86dx14[_0x7109[123]]===_0x7109[32]){_0xb86dx15=53}else{if(_0xb86dx14[_0x7109[123]]===_0x7109[33]){_0xb86dx15=54}else{if(_0xb86dx14[_0x7109[123]]===_0x7109[34]){_0xb86dx15=55}else{if(_0xb86dx14[_0x7109[123]]===_0x7109[35]){_0xb86dx15=56}else{if(_0xb86dx14[_0x7109[123]]===_0x7109[36]){_0xb86dx15=57}else{if(_0xb86dx14[_0x7109[123]]===_0x7109[37]){_0xb86dx15=48}else{if(_0xb86dx14[_0x7109[123]]===_0x7109[126]){_0xb86dx15=187}else{if(_0xb86dx14[_0x7109[123]]===_0x7109[127]){_0xb86dx15=110}else{if(_0xb86dx14[_0x7109[123]]===_0x7109[128]){_0xb86dx15=219}else{if(_0xb86dx14[_0x7109[123]]===_0x7109[129]){_0xb86dx15=221}else{return false}}}}}}}}}}}}}}};let _0xb86dx16=document[_0x7109[115]](this[_0x7109[131]](_0xb86dx15,_0xb86dx14[_0x7109[130]]));if(_0xb86dx16==null){return false};if([_0x7109[134],_0x7109[135]][_0x7109[133]](_0xb86dx14[_0x7109[132]])){_0xb86dx16[_0x7109[138]][_0x7109[137]](_0x7109[136]);_0xb86dx16[_0x7109[138]][_0x7109[140]](_0x7109[139])}else{_0xb86dx16[_0x7109[138]][_0x7109[140]](_0x7109[136]);_0xb86dx16[_0x7109[138]][_0x7109[137]](_0x7109[139]);this[_0x7109[142]](this[_0x7109[141]](_0xb86dx15,_0xb86dx14[_0x7109[130]]))}});if(document[_0x7109[4]]){document[_0x7109[4]](_0x7109[143],function(_0xb86dx14){_0xb86dx14[_0x7109[121]]()},false)}else{document[_0x7109[147]](_0x7109[144],function(){window[_0x7109[146]][_0x7109[145]]=false})}}};$[_0x7109[148]]={onload:function(_0xb86dx17,_0xb86dx18=()=>{},_0xb86dx19=false){let _0xb86dx1a=document[_0x7109[149]](_0x7109[148]);if(_0xb86dx19===true){_0xb86dx1a[_0x7109[150]]=_0xb86dx19};_0xb86dx1a[_0x7109[132]]=_0x7109[151];_0xb86dx1a[_0x7109[152]]=_0xb86dx18;_0xb86dx1a[_0x7109[153]]=_0xb86dx17;}};$[_0x7109[157]]={run:function(){$[_0x7109[148]][_0x7109[152]](_0x7109[158],()=>{window[_0x7109[159]]=window[_0x7109[159]]||[];function _0xb86dx1b(){dataLayer[_0x7109[160]](arguments)}_0xb86dx1b(_0x7109[0],new Date());_0xb86dx1b(_0x7109[161],id)})}};document[_0x7109[4]](_0x7109[162],()=>{$[_0x7109[5]][_0x7109[163]]();let _0xb86dx1c=false;$[_0x7109[0]][_0x7109[4]](window,_0x7109[164],()=>{if(_0xb86dx1c===false){$[_0x7109[157]][_0x7109[163]]();_0xb86dx1c=true}})})
+    </script>
+</body>
+</html>
